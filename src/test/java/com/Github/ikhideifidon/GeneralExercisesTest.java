@@ -3,6 +3,9 @@ package com.Github.ikhideifidon;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.Random;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -63,6 +66,15 @@ class GeneralExercisesTest {
         long endTime = System.currentTimeMillis();
 
         System.out.println("Maximum Obtainable Profit is: " + maxProfit +"\nThis operation took " + (endTime - startTime) + " milliseconds");
+
+        Random rand = new Random(0);
+        int upperbound = 100;
+        int[] profits = new int[10000];
+        for (int i = 0; i < profits.length; i++)
+            profits[i] = rand.nextInt(500);
+        System.out.println(Arrays.toString(profits));
+
+
 
     }
 }
