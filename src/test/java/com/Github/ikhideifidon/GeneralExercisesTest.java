@@ -2,8 +2,11 @@ package com.Github.ikhideifidon;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 
 import static org.junit.Assert.assertEquals;
@@ -73,8 +76,39 @@ class GeneralExercisesTest {
         for (int i = 0; i < profits.length; i++)
             profits[i] = rand.nextInt(500);
         System.out.println(Arrays.toString(profits));
+    }
 
+    @Test
+    public void generateParenthesis() {
+        int n = 3;
+        String[] expected = {"((()))","(()())","(())()","()(())","()()()"};
+        List<String> output = List.of(expected);
+        List<String> result = GeneralExercises.generateParenthesis(n);
+        Assertions.assertEquals(output, result);
+    }
 
+    @Test
+    public void jumpGame() {
+        Random rand = new Random(0);
+        int upperbound = 10_000;
+        int[] nums = new int[upperbound];
+        for (int i = 0; i < upperbound; i++)
+            nums[i] = rand.nextInt(0, upperbound * 10);
+        boolean expected = true;
+        Assertions.assertEquals(expected, GeneralExercises.jumpGame(nums));
 
+    }
+
+    @Test
+    public void jump() {
+        int[] nums = {2, 1, 1, 5, 2, 4};
+        System.out.println(GeneralExercises.jump(nums));
+    }
+
+    @Test
+    public void findMedianSortedArray() {
+        int[] nums1 = {1, 3};
+        int[] nums2 = {2};
+        System.out.println(GeneralExercises.findMedianSortedArrays(nums1, nums2));
     }
 }

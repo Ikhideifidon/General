@@ -1,6 +1,9 @@
 package com.Github.ikhideifidon;
 
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class GeneralExercises {
     // 0/1 Knapsack Problem and Dynamic Programming
     // Medium 416: Partition Equal Subset Sum
@@ -183,4 +186,130 @@ public class GeneralExercises {
         }
         return dp[n - 1][capacity];
     }
+
+    //  Generate Parentheses
+    public static List<String> generateParenthesis(int n) {
+        if (n == 0) return new LinkedList<>();
+        List<String> result = new LinkedList<>();
+        backtrack(n, 0, 0, "", result);
+        return result;
+    }
+
+    private static void backtrack(int n, int open, int close, String parenthesis, List<String> result) {
+        if (parenthesis.length() == n * 2) {
+            result.add(parenthesis);
+            return;
+        }
+
+        if (open < n)
+            backtrack(n, open + 1, close, parenthesis + "(", result);
+        if (open > close)
+            backtrack(n, open, close + 1, parenthesis + ")", result);
+    }
+
+    // Using StringBuilder
+    public List<String> generateParen(int n) {
+        List<String> res = new LinkedList<>();
+        dfs(n, 0, 0, new StringBuilder(), res);
+        return res;
+    }
+
+    private void dfs(int n, int open, int close, StringBuilder sb, List<String> res) {
+        if(close + open == 2 * n){
+            res.add(sb.toString());
+            return;
+        }
+
+        if(open < n){
+            sb.append("(");
+            dfs(n,open + 1, close, sb, res);
+            // Backtrack
+            sb.setLength(sb.length()-1);
+
+        }
+        if(close < open){
+            sb.append(")");
+            dfs(n,open,close + 1, sb, res);
+            // Backtrack
+            sb.setLength(sb.length()-1);
+        }
+    }
+
+    public static boolean jumpGame(int[] nums) {
+        if (nums == null) return false;
+        if (nums.length <= 1 ) return true;
+        if (nums[0] == 0) return false;
+
+        // Greedy Approach.
+        // Keep track of the maximum reachable index
+        for (int i = 0, maxReachable = 0; i < nums.length; i++) {
+            if (maxReachable < i)
+                return false;
+            maxReachable = Math.max(maxReachable, i + nums[i]);
+        }
+        return true;
+    }
+
+    // One dimensional BFS
+    public static int jump(int[] nums) {
+        if (nums == null) return 0;
+        int left = 0, right = 0, level = 0;
+
+        while (right < nums.length - 1) {
+            int farthest = 0;                       // farthest index reachable.
+             for (int i = left; i <= right; i++)
+                 farthest = Math.max(farthest, i + nums[i]);
+             left = right + 1;
+             right = farthest;
+             level++;
+        }
+        return level;
+    }
+
+    // Hard: Median of Two Sorted Arrays.
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums2 == null) {
+            if (nums1 == null) {
+                if (nums2.length % 2 != 0)
+                    return nums2[nums2.length / 2];
+                else {
+                    int mid = nums2.length / 2;
+                    return (double) (nums2[mid - 1] + nums2[mid]) / 2;
+                }
+
+            } else {
+                if (nums1.length % 2 != 0)
+                    return nums1[nums1.length / 2];
+                else {
+                    int mid = nums1.length / 2;
+                    return (double) (nums1[mid - 1] + nums1[mid]) / 2;
+                }
+            }
+        }
+
+        // Make sure nums1 is the shorter array
+        if (nums1.length > nums2.length)
+            return findMedianSortedArrays(nums2, nums1);
+
+        int m = nums1.length;
+        int n = nums2.length;
+        int k = (m + n + 1) / 2;                // Half of the combined length
+        int left = 0;
+        int right = m;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2 ;         // i is an index through nums1
+            int i = mid - 1;
+            int j = k - i - 1;                             // j is an index through nums2
+
+            int ALeft = i < 0 ? Integer.MIN_VALUE : nums1[i];
+            int ARight = i == nums1.length ? Integer.MAX_VALUE : nums1[i];
+
+            int BLeft = j == 0 ? Integer.MIN_VALUE : nums2[j - 1];
+            int BRight = j == nums2.length ? Integer.MAX_VALUE : nums2[j];
+
+
+        }
+    }
+//
 }

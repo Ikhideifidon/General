@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b4246edc-80d0-40ff-bf61-5a7898755922" name="Changes" comment="General">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Github/ikhideifidon/GeneralExercises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Github/ikhideifidon/GeneralExercises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Github/ikhideifidon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Github/ikhideifidon/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/Github/ikhideifidon/GeneralExercisesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/Github/ikhideifidon/GeneralExercisesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,9 +52,8 @@
       <recent name="com.Github.ikhideifidon" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GeneralExercisesTest.knapsack">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.Github.ikhideifidon.Main" />
+  <component name="RunManager" selected="JUnit.GeneralExercisesTest.findMedianSortedArray">
+    <configuration name="GeneralExercisesTest.findMedianSortedArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="General" />
       <extension name="coverage">
         <pattern>
@@ -60,6 +61,58 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.Github.ikhideifidon" />
+      <option name="MAIN_CLASS_NAME" value="com.Github.ikhideifidon.GeneralExercisesTest" />
+      <option name="METHOD_NAME" value="findMedianSortedArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneralExercisesTest.generateParenthesis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="General" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Github.ikhideifidon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Github.ikhideifidon" />
+      <option name="MAIN_CLASS_NAME" value="com.Github.ikhideifidon.GeneralExercisesTest" />
+      <option name="METHOD_NAME" value="generateParenthesis" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneralExercisesTest.jump" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="General" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Github.ikhideifidon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Github.ikhideifidon" />
+      <option name="MAIN_CLASS_NAME" value="com.Github.ikhideifidon.GeneralExercisesTest" />
+      <option name="METHOD_NAME" value="jump" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeneralExercisesTest.jumpGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="General" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Github.ikhideifidon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.Github.ikhideifidon" />
+      <option name="MAIN_CLASS_NAME" value="com.Github.ikhideifidon.GeneralExercisesTest" />
+      <option name="METHOD_NAME" value="jumpGame" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -80,27 +133,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GeneralExercisesTest.solveKnapsack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="General" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.Github.ikhideifidon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.Github.ikhideifidon" />
-      <option name="MAIN_CLASS_NAME" value="com.Github.ikhideifidon.GeneralExercisesTest" />
-      <option name="METHOD_NAME" value="solveKnapsack" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GeneralExercisesTest.findMedianSortedArray" />
+        <item itemvalue="JUnit.GeneralExercisesTest.jump" />
+        <item itemvalue="JUnit.GeneralExercisesTest.jumpGame" />
+        <item itemvalue="JUnit.GeneralExercisesTest.generateParenthesis" />
         <item itemvalue="JUnit.GeneralExercisesTest.knapsack" />
-        <item itemvalue="JUnit.GeneralExercisesTest.solveKnapsack" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -144,5 +183,21 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="General" />
     <option name="LAST_COMMIT_MESSAGE" value="General" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/Github/ikhideifidon/GeneralExercises.java</url>
+          <line>270</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/Github/ikhideifidon/GeneralExercises.java</url>
+          <line>311</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
