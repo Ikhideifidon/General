@@ -108,7 +108,7 @@ class GeneralExercisesTest {
     @Test
     public void findMedianSortedArray() {
         int[] nums1 = {1, 3};
-        int[] nums2 = {2};
+        int[] nums2 = null;
         System.out.println(GeneralExercises.findMedianSortedArrays(nums1, nums2));
     }
 }

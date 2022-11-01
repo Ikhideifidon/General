@@ -277,14 +277,8 @@ public class GeneralExercises {
                     return (double) (nums2[mid - 1] + nums2[mid]) / 2;
                 }
 
-            } else {
-                if (nums1.length % 2 != 0)
-                    return nums1[nums1.length / 2];
-                else {
-                    int mid = nums1.length / 2;
-                    return (double) (nums1[mid - 1] + nums1[mid]) / 2;
-                }
-            }
+            } else
+                return findMedianSortedArrays(null, nums1);
         }
 
         // Make sure nums1 is the shorter array
@@ -293,23 +287,31 @@ public class GeneralExercises {
 
         int m = nums1.length;
         int n = nums2.length;
-        int k = (m + n + 1) / 2;                // Half of the combined length
+        int k = (m + n + 1) / 2;                           // Half of the combined length. 1 is added to even out.
         int left = 0;
         int right = m;
 
         while (left <= right) {
-            int mid = left + (right - left) / 2 ;         // i is an index through nums1
-            int i = mid - 1;
-            int j = k - i - 1;                             // j is an index through nums2
+            int i = left + (right - left) / 2 ;            // i is an index through nums1
+            int j = k - i;                                 // j is an index through nums2
 
-            int ALeft = i < 0 ? Integer.MIN_VALUE : nums1[i];
+            int ALeft = (i - 1) < 0 ? Integer.MIN_VALUE : nums1[i - 1];
             int ARight = i == nums1.length ? Integer.MAX_VALUE : nums1[i];
 
-            int BLeft = j == 0 ? Integer.MIN_VALUE : nums2[j - 1];
+            int BLeft = (j - 1)  < 0 ? Integer.MIN_VALUE : nums2[j - 1];
             int BRight = j == nums2.length ? Integer.MAX_VALUE : nums2[j];
 
-
+            if (ALeft <= BRight && BLeft <= ARight) {
+                if ((m + n) % 2 == 0)
+                    return (double) (Math.max(ALeft, BLeft) + Math.min(ARight, BRight)) / 2;
+                else
+                    return Math.max(ALeft, BLeft);
+            } else if (ALeft > BRight)
+                right = i - 1;
+            else
+                left = i + 1;
         }
+        return 0.0;
     }
 //
 }
